@@ -1,27 +1,12 @@
 import React from 'react'
-import data from './data.json'
-import { Album } from './Spotify'
-import { Person } from './Person'
-import { albumNew } from './Music'
 
-console.log(data)
-console.log("music", albumNew)
+import { Home } from 'components/Home'
+
 
 export const App = () => {
   return (
     
-  <div className="album-grid">
-  
-  <div className="header"><p>New albums and singles</p></div>
-  
-
-{albumNew.map((album) =>  {
-        return <Album key={album.name} image={album.image} linkAlbum= {album.linkAlbum} name={album.name} 
-        artist1={album.artist1} link1={album.link1} artist2={album.artist2} link2={album.link2} 
-        artist3={album.artist3} link3={album.link3} />
-      })}
-
-</div>
+<Home />
 
   )
 }
