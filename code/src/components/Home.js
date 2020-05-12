@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../data.json'
 import { AlbumCard } from './AlbumCard'
+import {Header} from './Header'
 import styled from 'styled-components'
 
 const Grid = styled.section`
@@ -18,13 +19,16 @@ export const Home = () => {
   const spotifyList = data.albums.items
   console.log(spotifyList) 
   return (
+    <div>
+    <Header />
   <Grid>
 
   {spotifyList.map((item)=>{
     return( <AlbumCard object={item} />)
    
   })}
-  </Grid>  
+  </Grid> 
+  </div> 
     )
 }
 
